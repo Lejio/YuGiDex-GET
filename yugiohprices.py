@@ -28,9 +28,12 @@ class YuGiOhPrices:
         
         data = rsp.json()
         
-        print(data)
+        # print(data)
         for r in data['data']:
-            print(r['name'] + " " + r['print_tag'] + " " + r['rarity'] + " " + str(r['price_data']['data']['prices']['low']))
+            try:
+                print(r['name'] + " " + r['print_tag'] + " " + r['rarity'] + " " + str(r['price_data']['data']['prices']['low']))
+            except:
+                print(r)
         
         
     def __stringProcessor(self, name:str) -> str:
