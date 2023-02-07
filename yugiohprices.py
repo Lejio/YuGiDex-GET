@@ -30,9 +30,11 @@ class YuGiOhPrices:
         
         print(data)
         for r in data['data']:
-            print(r['name'] + " " + r['print_tag'] + " " + r['rarity'])
+            print(r['name'] + " " + r['print_tag'] + " " + r['rarity'] + " " + str(r['price_data']['data']['prices']['low']))
         
         
     def __stringProcessor(self, name:str) -> str:
         
         return name.replace(" ", "%20")
+    
+    # {'name': 'Yu-Gi-Oh! Power of Chaos: Kaiba the Revenge promotional cards', 'print_tag': 'PCK-001', 'rarity': 'Prismatic Secret Rare', 'price_data': {'status': 'success', 'data': {'listings': [], 'prices': {'high': 199.98, 'low': 14.99, 'average': 54.87, 'shift': -0.00254499181966915, 'shift_3': 0.0159229772264395, 'shift_7': 0.00476103277787951, 'shift_21': -0.0186013235557145, 'shift_30': -0.0870216306156406, 'shift_90': 0.0399924184988628, 'shift_180': -0.387884872824632, 'shift_365': -0.466556484542096, 'updated_at': '2023-02-07 02:46:46 -0500'}}}}
